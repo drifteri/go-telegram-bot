@@ -842,6 +842,6 @@ func (b *Bot) SetGameScore(ctx context.Context, params *SetGameScoreParams) (*mo
 // GetGameHighScores https://core.telegram.org/bots/api#getgamehighscores
 func (b *Bot) GetGameHighScores(ctx context.Context, params *GetGameHighScoresParams) ([]*models.GameHighScore, error) {
 	var result []*models.GameHighScore
-	err := b.rawRequest(ctx, "getGameHighScores", params, result)
+	err := b.rawRequest(ctx, "getGameHighScores", params, &result)
 	return result, err
 }
